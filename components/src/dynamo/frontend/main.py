@@ -233,9 +233,7 @@ async def async_main():
         kv_router_config = None
 
     if router_mode == RouterMode.LeastLoaded and config.enforce_disagg:
-        raise ValueError(
-            "least-loaded routing is not supported in disaggregated mode."
-        )
+        raise ValueError("least-loaded routing is not supported in disaggregated mode.")
 
     router_config = RouterConfig(
         router_mode,
